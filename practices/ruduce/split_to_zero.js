@@ -2,10 +2,11 @@
 
 function spilt_to_zero(number, interval) {
 	let spilt_to_zero = [];
-	spilt_to_zero.push(number);
-	while( number >= 0){
+	spilt_to_zero.push(parseFloat(number.toFixed(1)));
+	while( number > 0 && number !== 0){
 		number -= interval;
-		spilt_to_zero.push(number);
+		number = parseFloat(number.toFixed(1))
+		spilt_to_zero.push(parseFloat(number.toFixed(1)));
 	}
 	return spilt_to_zero;
 }
